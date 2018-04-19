@@ -1,0 +1,198 @@
+﻿
+@model Demooo.Models.ExportViewModel
+
+    @{
+        ViewBag.Title = "Index";
+    }
+<html>
+<head>
+    <style>
+       
+    </style>
+</head>
+<body>
+   
+        <h2>Index</h2>
+    <form action="/" method="post">
+        <table id="headerTable" class="table table-bordered" data-xls-columns="5" data-xls-column-widths="1,1.5,1.5,1,1">
+            <tbody>
+                <tr data-xls-exclude="True">
+                  <td colspan="5" style="text-align:right;"><a class="btn btn-default" id="exportExcel"><span class="glyphicon glyphicon-th"></span> Export to Excel</a></td>
+                </tr>
+
+                <tr>
+                    <td colspan="5" data-xls-col-index="0" data-xls-class="heading1" class="heading1">Searching criteria</td>
+                </tr>
+                <tr>
+                    <td colspan="5" rowspan="9" data-xls-class="heading1" class="heading1" align="center"><img src="http://localhost:13091/Content/images/terminal-logo.png" alt="Alternate Text" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                
+
+                <tr>
+                    <td colspan="2" data-xls-col-index="0" data-xls-class="rowHead" class="rowHead">Search Param 1</td>
+                    @*<td colspan="3" data-xls-col-index="2">=text(8821650318629,"000")</td>*@
+                    <td colspan="3" data-xls-col-index="2">&nbsp;013-22556487</td> @*&nbsp; for keep no phone foormat https://stackoverflow.com/questions/4619909/format-html-table-cell-so-that-excel-formats-as-text/40547339#40547339*@
+                    
+                </tr>
+                <tr>
+                    <td colspan="2" data-xls-col-index="0" data-xls-class="rowHead" class="rowHead" style="background-color:aqua">Period</td>
+                    <td colspan="3" data-xls-col-index="2">04/04/2017 - 03/05/2017</td>
+                </tr>
+                <tr>
+                    <td colspan="2" rowspan="2" data-xls-col-index="0" data-xls-class="rowHead" class="rowHead">Search Param 2</td>
+                    <td colspan="3" data-xls-col-index="2" style="background-color:greenyellow">Call Details</td>
+                </tr>
+                <tr>
+                    <td colspan="3" data-xls-col-index="2">GPS Location Information</td>
+                </tr>
+                <tr>
+                    <td colspan="2" rowspan="2" data-xls-col-index="0" data-xls-class="rowHead" class="rowHead">Search Param 3</td>
+                    <td colspan="3" data-xls-col-index="2">MS - ORIGINATING</td>
+                </tr>
+                <tr>
+                    <td colspan="3" data-xls-col-index="2">MS - TERMINATING</td>
+                </tr>
+                <tr>
+                    <td colspan="5" data-xls-col-index="0" data-xls-class="heading1" class="heading1" style="background-color:rosybrown">Summary Report</td>
+                </tr>
+                <tr>
+                    <td colspan="5" data-xls-col-index="0" data-xls-class="heading2" class="heading2">Originating Call Details</td>
+                </tr>
+                <tr>
+                    <td data-xls-col-index="0" data-xls-class="columnHead" class="columnHead">Number calling </td>
+                    <td data-xls-col-index="1" data-xls-class="columnHead" class="columnHead">Number called</td>
+                    <td data-xls-col-index="2" data-xls-class="columnHead" class="columnHead">Date(YYYY/MM/DD HH:MM:SS) </td>
+                    <td data-xls-col-index="3" data-xls-class="columnHead" class="columnHead">Call Duration(sec) </td>
+                    <td data-xls-col-index="4" data-xls-class="columnHead" class="columnHead">Country </td>
+                </tr>
+                <tr>
+                    <td data-xls-col-index="0">&nbsp;8821650318629 </td>
+                    <td data-xls-col-index="1">&nbsp;393662555630 </td>
+                    <td data-xls-col-index="2">2017/05/02 16:31:17 </td>
+                    <td data-xls-col-index="3">0 </td>
+                    <td data-xls-col-index="4">Mediterranean Sea </td>
+                </tr>
+                <tr>
+                    <td data-xls-col-index="0">&nbsp;8821650318629 </td>
+                    <td data-xls-col-index="1">&nbsp;393662555630 </td>
+                    <td data-xls-col-index="2">2017/05/02 03:40:30 </td>
+                    <td data-xls-col-index="3">0 </td>
+                    <td data-xls-col-index="4">Italy </td>
+                </tr>
+                <tr>
+                    <td colspan="5" data-xls-col-index="0" data-xls-class="heading2" class="heading2">Terminating Call Details</td>
+                </tr>
+                <tr>
+                    <td data-xls-col-index="0" data-xls-class="columnHead" class="columnHead">Number calling </td>
+                    <td data-xls-col-index="1" data-xls-class="columnHead" class="columnHead">Number called </td>
+                    <td data-xls-col-index="2" data-xls-class="columnHead" class="columnHead">Date(YYYY/MM/DD HH:MM:SS) </td>
+                    <td data-xls-col-index="3" data-xls-class="columnHead" class="columnHead">Call Duration(sec) </td>
+                    <td data-xls-col-index="4" data-xls-class="columnHead" class="columnHead">Country </td>
+                </tr>
+                <tr>
+                    <td data-xls-col-index="0" colspan="5" class="NoRecord">No Record found.</td>
+                </tr>
+                <tr>
+                    <td data-xls-col-index="0" colspan="5" data-xls-class="heading2" class="heading2">GPS Location Information </td>
+                </tr>
+                <tr>
+                    <td data-xls-col-index="0" data-xls-class="columnHead" class="columnHead">IMEI </td>
+                    <td data-xls-col-index="1" data-xls-class="columnHead" class="columnHead">Date(YYYY/MM/DD HH:MM:SS) </td>
+                    <td data-xls-col-index="2" data-xls-class="columnHead" class="columnHead">Country </td>
+                    <td data-xls-col-index="3" data-xls-class="columnHead" class="columnHead">Latitude </td>
+                    <td data-xls-col-index="4" data-xls-class="columnHead" class="columnHead">Longitude </td>
+                </tr>
+                <tr>
+                    <td data-xls-col-index="0">&nbsp;3560130010789500 </td>
+                    <td data-xls-col-index="1">2017/05/03 16:02:51 </td>
+                    <td data-xls-col-index="2">ITALY </td>
+                    <td data-xls-col-index="3">45.220586 </td>
+                    <td data-xls-col-index="4">12.282395 </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>
+@Html.HiddenFor(x => x.Csv)
+<script language="JavaScript" type="text/javascript" src="~/Scripts/jquery-3.3.1.min.js"></script>
+
+
+    <script type="text/javascript">
+        //export table to excel
+        $("#exportExcel").on('click', exportReportExcel);
+        var reportExcelName = "Demo Report Table";
+        function exportReportExcel(e) {
+            
+            if (isInternetExplorer()) {
+                var blobURL = reportToExcel('headerTable', 'Report_sheet1');
+            } else {
+                var blobURL = reportToExcel('headerTable', 'Report_sheet1');
+                console.log(this);
+                this.href = blobURL;
+                this.download = reportExcelName + Date.now() + '.xls';
+                return true;
+            }
+        }
+
+        function isInternetExplorer() {
+            var isIE11 = navigator.userAgent.indexOf(".NET CLR") > -1;
+            var isIE11orLess = isIE11 || navigator.appVersion.indexOf("MSIE") != -1;
+            return isIE11orLess;
+        }
+
+        var reportToExcel = (function () {
+            var uri = 'data:application/vnd.ms-excel;base64,',
+                template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--><meta http-equiv="content-type" content="text/plain; charset=UTF-8"/></head><body><table>{table}</table></body></html>',
+                base64 = function (s) { return window.btoa(unescape(encodeURIComponent(s))) },
+                format = function (s, c) { return s.replace(/{(\w+)}/g, function (m, p) { return c[p]; }) }
+            return function (table, sheetname) {
+                //var iframereport = $('#frame-report').contents().find('body');
+                if (!table.nodeType) table = document.getElementById(table)
+                //var ctx = { worksheet: sheetname || 'Worksheet', table: $('#'+table).html() }
+                var ctx = { worksheet: sheetname || 'Worksheet', table: table.innerHTML }
+                var blob = new Blob([format(template, ctx)]);
+                var blobURL = window.URL.createObjectURL(blob);
+
+                //IE
+                if (isInternetExplorer()) {
+                    csvData = table.innerHTML;
+
+                    if (window.navigator.msSaveBlob) {
+                        var blob = new Blob([format(template, ctx)], {
+                            type: "text/html"
+                        });
+                        navigator.msSaveBlob(blob, '' + reportExcelName + Date.now() + '.xls');
+                    }
+                } else {
+                    console.log('chrome');
+                    return blobURL;
+                }
+            }
+        })()
+    </script>
